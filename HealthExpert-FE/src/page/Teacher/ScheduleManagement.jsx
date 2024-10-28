@@ -8,11 +8,15 @@ import TextField from '@mui/material/TextField';
 import { LocalizationProvider, TimePicker } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import dayjs from 'dayjs';
-
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
 import Header from "../../components/Header";
 import './schedule.css';
 import { useParams } from "react-router-dom";
 import axios from "axios";
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 moment.locale('en');
 const localizer = momentLocalizer(moment);
@@ -144,15 +148,15 @@ const ScheduleManagement = () => {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <Header />
-      <div className="schedule-container">
+      <div className="schedule-container w-full max-w-full mx-auto mt-12">
         <h1 className="schedule-title">Lịch Học Của Học Viên</h1>
         <div className="calendar">
           <Calendar
             localizer={localizer}
             events={events.map(event => ({
               ...event,
-              start: dayjs(event.timeStart).toDate(),
-              end: dayjs(event.timeEnd).toDate(),
+              start: dayjs.utc(event.timeStart).toDate(),
+              end: dayjs.utc(event.timeEnd).toDate(),
             }))}
             startAccessor="start"
             endAccessor="end"
