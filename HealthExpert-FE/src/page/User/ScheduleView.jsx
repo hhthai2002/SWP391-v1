@@ -91,8 +91,8 @@ const ScheduleView = () => {
                         localizer={localizer}
                         events={events.map(event => ({
                             ...event,
-                            start: dayjs(event.timeStart).toDate(),
-                            end: dayjs(event.timeEnd).toDate(),
+                            start: dayjs(event.timeStart).local().toDate(),
+                            end: dayjs(event.timeEnd).local().toDate(),
                         }))}
                         startAccessor="start"
                         endAccessor="end"
