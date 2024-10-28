@@ -49,8 +49,8 @@ const ScheduleManagement = () => {
       description: currentEvent.desc,
       googleMeetLink: currentEvent.googleMeetLink,
       zaloLink: currentEvent.zaloLink,
-      timeStart: currentEvent.start.toISOString(),
-      timeEnd: currentEvent.end.toISOString(),
+      timeStart: currentEvent.start.utc().toISOString(),
+      timeEnd: currentEvent.end.utc().toISOString(),
     };
 
     try {
