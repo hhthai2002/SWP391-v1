@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F1iOTWeGy1OjnO0uKBxiUcmo6YkAXS3WopdZo8aeHaKi62jL88/JnZ4EDjirHeOTbft51lJt3iIIdh7NvQF7TA==",
+  "dgSpecHash": "lrrQSVeBoJo1puYCamwj3zJK8+vmTifwW7ngMnM5+hCWA+VZpCkwAauy5NE6sUrxmQZqCKWMzEBrI1IK4iSfDw==",
   "success": true,
-  "projectFilePath": "E:\\SWP\\SWP391\\HealthExpert\\BussinessObject\\BussinessObject.csproj",
+  "projectFilePath": "E:\\SWP391\\SWP391\\HealthExpert\\BussinessObject\\BussinessObject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
